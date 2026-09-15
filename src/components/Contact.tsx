@@ -234,7 +234,7 @@ export const Contact: React.FC = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="e.g. 9043124078"
+                      placeholder="e.g. 63699 31669"
                       className={`form-input ${formErrors.phone ? "error" : ""}`}
                     />
                     {formErrors.phone && (
