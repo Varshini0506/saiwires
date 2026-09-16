@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { COMPANY_DATA } from "../data/company";
-import { MessageCircle, Menu, X, Shield, ArrowRight, Home, Info, Wrench, Image, Eye, Award, CheckCircle, PhoneCall } from "lucide-react";
+import { MessageCircle, Menu, X, Shield, ArrowRight, Home, Info, Wrench, Image, Eye, Award, PhoneCall } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
