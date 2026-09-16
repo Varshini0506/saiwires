@@ -52,8 +52,8 @@ export const Footer: React.FC = () => {
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#projects">Showcase</a></li>
+              <li><a href="#works">Our Works</a></li>
+              <li><a href="#why-us">Why Choose Us</a></li>
               <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>

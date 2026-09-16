@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { HeroShowcase } from "./components/HeroShowcase";
 import { VisualIntro } from "./components/VisualIntro";
 import { AboutSection } from "./components/AboutSection";
 import { FencingServices } from "./components/FencingServices";
 import { FencingWorkGallery } from "./components/FencingWorkGallery";
+import { DedicatedGalleryPage } from "./components/DedicatedGalleryPage";
 import { ProjectEditorialShowcase } from "./components/ProjectEditorialShowcase";
 import { WhyChooseUsSection } from "./components/WhyChooseUsSection";
 import { HowItWorksProcess } from "./components/HowItWorksProcess";
@@ -15,41 +16,66 @@ import { COMPANY_DATA } from "./data/company";
 import { MessageCircle, Phone, ArrowRight } from "lucide-react";
 
 export const App: React.FC = () => {
+  const [isGalleryPage, setIsGalleryPage] = useState<boolean>(() => {
+    return window.location.hash === "#gallery-page";
+  });
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const isGallery = window.location.hash === "#gallery-page";
+      setIsGalleryPage(isGallery);
+      if (isGallery) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   return (
     <div className="website-root">
       {/* 1. Sticky Premium Navbar */}
       <Navbar />
 
       <main>
-        {/* 2. Hero Showcase: Automatic Slider with Real Fencing Images, Thumbnails & Lightbox */}
-        <HeroShowcase />
+        {isGalleryPage ? (
+          /* Separate Dedicated Gallery / Our Work Page (All Works + Category Filter Buttons) */
+          <DedicatedGalleryPage />
+        ) : (
+          /* Main Landing Page (Limited Preview, NO Category Filter Buttons) */
+          <>
+            {/* 2. Hero Showcase: Automatic Slider with Real Fencing Images */}
+            <HeroShowcase />
 
-        {/* 3. Visual Introduction: "Fencing That Protects Your Land" Asymmetric Layout */}
-        <VisualIntro />
+            {/* 3. Visual Introduction: "Fencing That Protects Your Land" */}
+            <VisualIntro />
 
-        {/* 4. About Us: Clean Split Section with Large Fencing Image & 4 Highlights */}
-        <AboutSection />
+            {/* 4. About Us: Clean Split Section with Large Fencing Image & 4 Highlights */}
+            <AboutSection />
 
-        {/* 5. Our Fencing Services: Large Image-First Cards */}
-        <FencingServices />
+            {/* 5. Our Fencing Services: Large Image-First Cards */}
+            <FencingServices />
 
-        {/* 6. Work Gallery: Displays ALL Existing Fencing Images in Dynamic Masonry + Full Lightbox */}
-        <FencingWorkGallery />
+            {/* 6. Work Gallery Preview: Limited "All" works preview + "View More" button */}
+            <FencingWorkGallery />
 
-        {/* 7. Project Showcase: "Built For Farms. Built To Last." Editorial Construction Layout */}
-        <ProjectEditorialShowcase />
+            {/* 7. Project Showcase: "Built For Farms. Built To Last." */}
+            <ProjectEditorialShowcase />
 
-        {/* 8. Why Choose Us: 4 Pillars with Simple Icons & Minimal Text */}
-        <WhyChooseUsSection />
+            {/* 8. Why Choose Us: 4 Pillars */}
+            <WhyChooseUsSection />
 
-        {/* 9. Simple Process: "How It Works" 4-Step Visual Timeline */}
-        <HowItWorksProcess />
+            {/* 9. Simple Process: "How It Works" 4-Step Timeline */}
+            <HowItWorksProcess />
 
-        {/* 10. Large Image CTA: Full-Width Real Fencing Banner */}
-        <LargeImageCTA />
+            {/* 10. Large Image CTA: Full-Width Real Fencing Banner */}
+            <LargeImageCTA />
 
-        {/* 11. Contact Us: Split Layout with Fencing Image, Direct Connect & Quote Form */}
-        <ContactSection />
+            {/* 11. Contact Us: Split Layout with Fencing Image & Quote Form */}
+            <ContactSection />
+          </>
+        )}
       </main>
 
       {/* 12. Footer */}

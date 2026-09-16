@@ -34,7 +34,7 @@ export const HowItWorksProcess: React.FC = () => {
   ];
 
   return (
-    <section className="how-it-works-section section-space">
+    <section id="how-it-works" className="how-it-works-section section-space">
       <div className="container">
         {/* Section Header */}
         <div className="custom-header">

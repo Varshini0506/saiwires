@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { EDITORIAL_SHOWCASE } from "../data/fencingImages";
 import type { FencingImageItem } from "../data/fencingImages";
 import { LightboxModal } from "./LightboxModal";
-import { Maximize2, MapPin } from "lucide-react";
+import { Maximize2, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 
 export const ProjectEditorialShowcase: React.FC = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [mobileIndex, setMobileIndex] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   const showcaseList: FencingImageItem[] = [
     EDITORIAL_SHOWCASE.hero,
@@ -14,6 +18,56 @@ export const ProjectEditorialShowcase: React.FC = () => {
     EDITORIAL_SHOWCASE.wideBottom,
     EDITORIAL_SHOWCASE.featuredPvc
   ];
+
+  const total = showcaseList.length;
+
+  const handlePrev = useCallback(() => {
+    setMobileIndex((prev) => (prev - 1 + total) % total);
+    setIsPaused(true);
+    setTimeout(() => setIsPaused(false), 4000);
+  }, [total]);
+
+  const handleNext = useCallback(() => {
+    setMobileIndex((prev) => (prev + 1) % total);
+    setIsPaused(true);
+    setTimeout(() => setIsPaused(false), 4000);
+  }, [total]);
+
+  // Auto-play slideshow for mobile view (changes every 3.5s)
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setMobileIndex((prev) => (prev + 1) % total);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [total, isPaused]);
+
+  // Handle swipe navigation on mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = useCallback(() => {
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const diffX = touchStartX.current - touchEndX.current;
+      const threshold = 40;
+      if (diffX > threshold) {
+        handleNext();
+      } else if (diffX < -threshold) {
+        handlePrev();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+    setTimeout(() => setIsPaused(false), 4000);
+  }, [handleNext, handlePrev]);
 
   return (
     <section id="projects" className="editorial-showcase-section section-space">
@@ -27,8 +81,8 @@ export const ProjectEditorialShowcase: React.FC = () => {
           </p>
         </div>
 
-        {/* Editorial Layout Grid: 1 Large Hero + 2 Stacked Side + 1 Wide Underneath + 1 Highlight */}
-        <div className="editorial-mosaic-layout">
+        {/* Desktop View: Editorial Layout Grid (min-width: 769px) */}
+        <div className="editorial-mosaic-layout desktop-only-grid">
           {/* Top Row: 1 Mega Image + 2 Stacked Side Images */}
           <div className="editorial-top-row">
             {/* Mega Large Image (Left) */}
@@ -148,6 +202,72 @@ export const ProjectEditorialShowcase: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Mobile View: Single Centered Card with Side Arrows (<= 768px) */}
+        <div
+          className="side-arrow-carousel-wrap mobile-only-slider"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Left Side Arrow */}
+          <button
+            type="button"
+            className="carousel-side-arrow prev"
+            onClick={handlePrev}
+            aria-label="Previous showcase project"
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          {/* Single Centered Active Card Container */}
+          <div className="side-arrow-card-stage editorial-card-stage">
+            {showcaseList.map((item, idx) => (
+              <div
+                key={item.id}
+                className={`mobile-slide-card editorial-mobile-card ${idx === mobileIndex ? "active" : ""}`}
+                onClick={() => setLightboxIndex(idx)}
+                aria-hidden={idx !== mobileIndex}
+              >
+                <div className="editorial-item editorial-mobile-frame">
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="editorial-img"
+                    loading={idx === 0 ? "eager" : "lazy"}
+                  />
+                  <div className="editorial-item-content mobile-editorial-overlay">
+                    <span className="editorial-pill">{item.label || "Project Feature"}</span>
+                    <h3 className="editorial-title">{item.title}</h3>
+                    {item.description && (
+                      <p className="editorial-desc">{item.description}</p>
+                    )}
+                    <div className="editorial-meta-row">
+                      {item.location && (
+                        <span className="editorial-loc">
+                          <MapPin size={13} /> {item.location}
+                        </span>
+                      )}
+                      <span className="editorial-zoom-btn">
+                        <Maximize2 size={14} /> Expand
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Side Arrow */}
+          <button
+            type="button"
+            className="carousel-side-arrow next"
+            onClick={handleNext}
+            aria-label="Next showcase project"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
 
