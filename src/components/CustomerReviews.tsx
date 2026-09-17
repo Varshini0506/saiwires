@@ -4,7 +4,7 @@ import { Star, Quote, Sparkles } from "lucide-react";
 
 export const CustomerReviews: React.FC = () => {
   return (
-    <section className="customer-reviews-section section-space">
+    <section id="reviews" className="customer-reviews-section section-space">
       <div className="container">
         {/* Section Header */}
         <div className="custom-header">

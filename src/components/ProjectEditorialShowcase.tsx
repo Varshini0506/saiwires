@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { EDITORIAL_SHOWCASE } from "../data/fencingImages";
 import type { FencingImageItem } from "../data/fencingImages";
 import { LightboxModal } from "./LightboxModal";
-import { Maximize2, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
+import { Maximize2, MapPin, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 export const ProjectEditorialShowcase: React.FC = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -72,12 +72,12 @@ export const ProjectEditorialShowcase: React.FC = () => {
   return (
     <section id="projects" className="editorial-showcase-section section-space">
       <div className="container">
-        {/* Editorial Section Header */}
+        {/* Editorial Section Header with Simple English */}
         <div className="editorial-header">
-          <div className="custom-badge">Quality Construction Portfolio</div>
-          <h2 className="editorial-main-title">BUILT FOR FARMS. BUILT TO LAST.</h2>
+          <div className="custom-badge">Real Site Photos</div>
+          <h2 className="editorial-main-title">PROJECT SHOWCASE</h2>
           <p className="editorial-sub-text">
-            Engineered boundaries built with precision concrete casting, high-grade galvanized wire mesh, and rock-solid anchoring.
+            Strong boundary fencing built with stone pillars, concrete posts, and heavy GI wire mesh for farms and plots across Tamil Nadu.
           </p>
         </div>
 
@@ -268,6 +268,14 @@ export const ProjectEditorialShowcase: React.FC = () => {
           >
             <ChevronRight size={20} />
           </button>
+        </div>
+
+        {/* View More Works Link */}
+        <div className="gallery-preview-action-row" style={{ marginTop: "32px", textAlign: "center" }}>
+          <a href="#gallery-page" className="btn btn-primary btn-lg gallery-view-more-btn">
+            <span>View More Works</span>
+            <ArrowRight size={18} style={{ marginLeft: "8px" }} />
+          </a>
         </div>
       </div>
 

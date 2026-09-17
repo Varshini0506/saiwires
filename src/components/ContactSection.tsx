@@ -39,7 +39,7 @@ export const ContactSection: React.FC = () => {
 
     // Open WhatsApp with prefilled message
     const waText = encodeURIComponent(
-      `Hello SAI WIRES AND FENCE,\n*New Enquiry:*\nName: ${formData.name}\nPhone: ${formData.phone}\nLocation: ${formData.location}\nFencing: ${formData.fencingType}\nMessage: ${formData.message || "Requesting quotation and site visit."}`
+      `Hello SRI SAI WIRE NETTING,\n*New Enquiry:*\nName: ${formData.name}\nPhone: ${formData.phone}\nLocation: ${formData.location}\nFencing: ${formData.fencingType}\nMessage: ${formData.message || "Requesting quotation and site visit."}`
     );
     window.open(`https://wa.me/${COMPANY_DATA.whatsapp}?text=${waText}`, "_blank");
   };
@@ -52,7 +52,7 @@ export const ContactSection: React.FC = () => {
           <div className="custom-badge">Get in Touch</div>
           <h2 className="custom-title">CONTACT US</h2>
           <p className="custom-sub">
-            Request a site inspection or quick quotation for your land fencing.
+            Request a site inspection or quick quotation for your land fencing in Therpathai and across Tamil Nadu.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ export const ContactSection: React.FC = () => {
             <div className="contact-image-frame">
               <img
                 src={CONTACT_BANNER_IMAGE}
-                alt="SAI WIRES AND FENCE Boundary"
+                alt="SRI SAI WIRE NETTING Boundary"
                 className="contact-real-img"
                 loading="lazy"
               />
@@ -106,8 +106,8 @@ export const ContactSection: React.FC = () => {
                   <MapPin size={20} />
                 </div>
                 <div className="pill-text-wrap">
-                  <span className="pill-label">Service Area</span>
-                  <strong className="pill-value">Tamil Nadu (All Districts)</strong>
+                  <span className="pill-label">Location / Service Area</span>
+                  <strong className="pill-value">{COMPANY_DATA.location}, Tamil Nadu</strong>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ export const ContactSection: React.FC = () => {
                 </p>
                 <div className="success-actions">
                   <a
-                    href={`https://wa.me/${COMPANY_DATA.whatsapp}?text=Hello%20SAI%20WIRES,%20I%20just%20submitted%20a%20quote%20request%20for%20${encodeURIComponent(formData.fencingType)}`}
+                    href={`https://wa.me/${COMPANY_DATA.whatsapp}?text=Hello%20SRI%20SAI%20WIRE%20NETTING,%20I%20just%20submitted%20a%20quote%20request%20for%20${encodeURIComponent(formData.fencingType)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-whatsapp"
@@ -185,7 +185,7 @@ export const ContactSection: React.FC = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="e.g. 98765 43210"
+                      placeholder="e.g. 98439 32637"
                       className="form-input"
                       required
                     />

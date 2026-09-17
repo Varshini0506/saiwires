@@ -7,14 +7,14 @@ export const Testimonials: React.FC = () => {
     <section className="testimonials-section section-padding">
       <div className="container">
         {/* Section Header */}
-        <div className="section-header">
+        <div className="section-header text-center">
           <div className="section-badge">
             <Sparkles size={14} />
-            <span>CLIENT EXPERIENCES</span>
+            <span>CUSTOMER EXPERIENCES</span>
           </div>
-          <h2 className="section-title">What Our Customers Say</h2>
+          <h2 className="section-title">WHAT OUR CLIENTS SAY</h2>
           <p className="section-subtitle">
-            Read authentic feedback from farm owners, property developers, and plot owners who trusted Sri Fence Solutions.
+            Read authentic feedback from farm owners, property developers, and plot owners who trusted SRI SAI WIRE NETTING.
           </p>
         </div>
 

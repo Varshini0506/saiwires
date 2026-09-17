@@ -24,7 +24,7 @@ export const BeforeAfter: React.FC = () => {
           {/* AFTER (Fenced) */}
           <div className="compare-pane after-pane">
             <img
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=85"
+              src="/images/fencing/2093d765-dd00-412e-bf1b-f7d31cedc2a4.jpg"
               alt="After: Protected land with strong Kambi Veli boundary"
               className="compare-photo"
             />
@@ -40,7 +40,7 @@ export const BeforeAfter: React.FC = () => {
             style={{ clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }}
           >
             <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85"
+              src="/images/fencing/2ac4f63b-d71d-4056-9ae3-cad590c039c0.jpg"
               alt="Before: Unprotected open agricultural land"
               className="compare-photo tint-before"
             />

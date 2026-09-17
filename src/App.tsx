@@ -4,10 +4,9 @@ import { HeroShowcase } from "./components/HeroShowcase";
 import { VisualIntro } from "./components/VisualIntro";
 import { AboutSection } from "./components/AboutSection";
 import { FencingServices } from "./components/FencingServices";
-import { FencingWorkGallery } from "./components/FencingWorkGallery";
-import { DedicatedGalleryPage } from "./components/DedicatedGalleryPage";
 import { ProjectEditorialShowcase } from "./components/ProjectEditorialShowcase";
-import { WhyChooseUsSection } from "./components/WhyChooseUsSection";
+import { DedicatedGalleryPage } from "./components/DedicatedGalleryPage";
+import { SiteVideosShowcase } from "./components/SiteVideosShowcase";
 import { HowItWorksProcess } from "./components/HowItWorksProcess";
 import { LargeImageCTA } from "./components/LargeImageCTA";
 import { ContactSection } from "./components/ContactSection";
@@ -35,50 +34,47 @@ export const App: React.FC = () => {
 
   return (
     <div className="website-root">
-      {/* 1. Sticky Premium Navbar */}
+      {/* 1. Sticky Header Navbar */}
       <Navbar />
 
       <main>
         {isGalleryPage ? (
-          /* Separate Dedicated Gallery / Our Work Page (All Works + Category Filter Buttons) */
+          /* Full Collection of Real Customer Photos (Opened only upon clicking View More Works) */
           <DedicatedGalleryPage />
         ) : (
-          /* Main Landing Page (Limited Preview, NO Category Filter Buttons) */
+          /* Main Landing Page */
           <>
-            {/* 2. Hero Showcase: Automatic Slider with Real Fencing Images */}
+            {/* 2. Hero Section: Real Fencing Photos */}
             <HeroShowcase />
 
-            {/* 3. Visual Introduction: "Fencing That Protects Your Land" */}
+            {/* 3. Short Visual Intro */}
             <VisualIntro />
 
-            {/* 4. About Us: Clean Split Section with Large Fencing Image & 4 Highlights */}
+            {/* 4. About Us: Founder & Company Information */}
             <AboutSection />
 
-            {/* 5. Our Fencing Services: Large Image-First Cards */}
+            {/* 5. Services Provided */}
             <FencingServices />
 
-            {/* 6. Work Gallery Preview: Limited "All" works preview + "View More" button */}
-            <FencingWorkGallery />
-
-            {/* 7. Project Showcase: "Built For Farms. Built To Last." */}
+            {/* 6. Showcase: Small photo preview + View More Works button */}
             <ProjectEditorialShowcase />
 
-            {/* 8. Why Choose Us: 4 Pillars */}
-            <WhyChooseUsSection />
+            {/* 7. Videos: 4 Real Customer Videos with Continuous Autoplay */}
+            <SiteVideosShowcase />
 
-            {/* 9. Simple Process: "How It Works" 4-Step Timeline */}
+            {/* 8. Simple 4-Step Process */}
             <HowItWorksProcess />
 
-            {/* 10. Large Image CTA: Full-Width Real Fencing Banner */}
+            {/* 9. Large Real Fencing Banner CTA */}
             <LargeImageCTA />
 
-            {/* 11. Contact Us: Split Layout with Fencing Image & Quote Form */}
+            {/* 10. Contact Us & Quote Form */}
             <ContactSection />
           </>
         )}
       </main>
 
-      {/* 12. Footer */}
+      {/* 11. Footer */}
       <Footer />
 
       {/* Desktop Floating WhatsApp Button */}

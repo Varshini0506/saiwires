@@ -7,7 +7,7 @@ export const CTA: React.FC = () => {
     <section className="final-cta-section">
       <div className="cta-full-bg">
         <img
-          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=85"
+          src="/images/fencing/7594a0cd-85e0-4b8f-9773-a919d912bd5d.jpg"
           alt="Completed agricultural fencing project Tamil Nadu"
           className="cta-bg-img"
         />

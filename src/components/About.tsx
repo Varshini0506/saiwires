@@ -34,7 +34,7 @@ export const About: React.FC = () => {
           <div className="about-visual-col">
             <div className="about-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=1000&q=80"
+                src="/images/fencing/2093d765-dd00-412e-bf1b-f7d31cedc2a4.jpg"
                 alt="Strong land fencing posts and wire boundaries in Tamil Nadu"
                 className="about-main-img"
               />

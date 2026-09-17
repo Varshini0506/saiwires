@@ -60,12 +60,12 @@ export const FencingServices: React.FC = () => {
   return (
     <section id="services" className="services-section section-space">
       <div className="container">
-        {/* Section Header */}
+        {/* Section Header with Simple English */}
         <div className="custom-header">
-          <div className="custom-badge">Heavy-Duty Solutions</div>
+          <div className="custom-badge">Our Fencing Types</div>
           <h2 className="custom-title">OUR FENCING SERVICES</h2>
           <p className="custom-sub">
-            Engineered wire mesh and durable concrete post fencing built specifically for Tamil Nadu lands.
+            Strong wire netting, stone pillars, and concrete post fencing built for farmlands, plots, and homes across Tamil Nadu.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export const FencingServices: React.FC = () => {
 
                 <div className="service-card-action">
                   <a
-                    href={`https://wa.me/${COMPANY_DATA.whatsapp}?text=Hello%20SAI%20WIRES,%20I%20am%20interested%20in%20${encodeURIComponent(service.name)}%20for%20my%20land.`}
+                    href={`https://wa.me/${COMPANY_DATA.whatsapp}?text=Hello%20SRI%20SAI%20WIRE%20NETTING,%20I%20am%20interested%20in%20${encodeURIComponent(service.name)}%20for%20my%20land.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="service-quote-btn"
@@ -170,7 +170,7 @@ export const FencingServices: React.FC = () => {
 
                   <div className="service-card-action">
                     <a
-                      href={`https://wa.me/${COMPANY_DATA.whatsapp}?text=Hello%20SAI%20WIRES,%20I%20am%20interested%20in%20${encodeURIComponent(service.name)}%20for%20my%20land.`}
+                      href={`https://wa.me/${COMPANY_DATA.whatsapp}?text=Hello%20SRI%20SAI%20WIRE%20NETTING,%20I%20am%20interested%20in%20${encodeURIComponent(service.name)}%20for%20my%20land.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="service-quote-btn"

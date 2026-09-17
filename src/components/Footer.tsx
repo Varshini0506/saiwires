@@ -1,6 +1,6 @@
 import React from "react";
 import { COMPANY_DATA } from "../data/company";
-import { Shield, Phone, MessageCircle, MapPin, ArrowUp } from "lucide-react";
+import { Phone, MessageCircle, MapPin, ArrowUp } from "lucide-react";
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
           <div className="footer-col footer-col-brand">
             <div className="footer-brand-header">
               <div className="footer-brand-icon">
-                <Shield size={22} />
+                <img src="/images/logo.png" alt={COMPANY_DATA.name} className="brand-logo-img" />
               </div>
               <div className="footer-brand-title-wrap">
                 <span className="footer-brand-name">{COMPANY_DATA.name}</span>
@@ -52,8 +52,8 @@ export const Footer: React.FC = () => {
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#works">Our Works</a></li>
-              <li><a href="#why-us">Why Choose Us</a></li>
+              <li><a href="#projects">Showcase</a></li>
+              <li><a href="#videos">Videos</a></li>
               <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>

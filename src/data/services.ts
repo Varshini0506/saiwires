@@ -32,7 +32,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "Most Popular",
     features: ["Wild Boar & Animal Protection", "High Tensile GI Wire", "Stone / RCC Post Support", "Weather Resistant Coating"],
     bestFor: "Farmlands, Coconut Groves, Paddy Fields, Plantations",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+    image: "/images/fencing/2ac4f63b-d71d-4056-9ae3-cad590c039c0.jpg"
   },
   {
     id: "chain-link",
@@ -43,7 +43,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "High Durability",
     features: ["Hot-Dip Galvanized & PVC Coated", "Custom Mesh Size (2\" to 4\")", "Uniform Tension & Clean Finish", "Rust & Corrosion Free"],
     bestFor: "Farm Boundaries, Layout Plots, Residential Compounds, Sports Grounds",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80"
+    image: "/images/fencing/27246645-baa5-4ffa-886a-55c081fb3862.jpg"
   },
   {
     id: "barbed-wire",
@@ -54,7 +54,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "Cost Effective",
     features: ["4-Point Sharp Barb Spacing", "Heavy Zinc Coating", "Multi-Line Configurations (3 to 7 lines)", "Quick Installation"],
     bestFor: "Large Acreage Farms, Highway Borders, Barren Land Demarcation",
-    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80"
+    image: "/images/fencing/2093d765-dd00-412e-bf1b-f7d31cedc2a4.jpg"
   },
   {
     id: "rcc-post",
@@ -65,7 +65,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "Maximum Strength",
     features: ["Steel-Reinforced Concrete", "Pre-drilled Eyelet Holes", "Termite & Weather Proof", "Up to 25+ Years Lifespan"],
     bestFor: "Permanent Boundary Security, Farmlands, Commercial Yards",
-    image: "https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=800&q=80"
+    image: "/images/fencing/2842b4ce-4379-4313-8723-8233fc5b5b97.jpg"
   },
   {
     id: "farm-cattle",
@@ -76,7 +76,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "Livestock Safe",
     features: ["Graduated Mesh Spacing", "Impact Absorption Flexibility", "Predator Deterrence", "Safe for Animals"],
     bestFor: "Dairy Farms, Goat & Sheep Enclosures, Stud Farms, Organic Orchards",
-    image: "https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=800&q=80"
+    image: "/images/fencing/7594a0cd-85e0-4b8f-9773-a919d912bd5d.jpg"
   },
   {
     id: "residential",
@@ -87,7 +87,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "Plot Protection",
     features: ["Encroachment Prevention", "Clean & Modern Appearance", "Anti-Climb Design", "Gate Integration Available"],
     bestFor: "Vacant Plots, Residential Layouts, Farmhouses, Villa Communities",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+    image: "/images/fencing/824e623a-364a-4c13-bea7-5b5545887915.jpg"
   },
   {
     id: "industrial",
@@ -98,7 +98,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "High Security",
     features: ["Razor Blade / Concertina Coils", "Heavy Industrial Gauge", "Anti-Intrusion Design", "IS Standard Certified GI Materials"],
     bestFor: "Warehouses, Factories, Solar Plants, Logistics Yards",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+    image: "/images/fencing/863c164a-634e-49da-992e-c370b4b4f47c.jpg"
   },
   {
     id: "custom",
@@ -109,7 +109,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "Tailored Design",
     features: ["Site-Specific Engineering", "Sloped Terrain Adaptability", "Turnkey Fabrication & Gates", "Flexible Budgeting Packages"],
     bestFor: "Irregular Terrains, Rocky Hillsides, Custom Estate Properties",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+    image: "/images/fencing/eae3ec64-e9d1-4b1c-acf5-11e8b7dfe064.jpg"
   },
 ];
 
@@ -121,7 +121,7 @@ export const FENCING_TYPES_DATA: FencingTypeItem[] = [
     description: "Woven diamond mesh made from galvanized steel. Gives clear line of sight while preventing unauthorized entry.",
     lifespan: "15–20 Years",
     maintenance: "Low Maintenance",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80",
+    image: "/images/fencing/27246645-baa5-4ffa-886a-55c081fb3862.jpg",
     highlights: ["2\" to 4\" Mesh Options", "8 to 12 Gauge Wire", "PVC Coating in Green/Blue available", "Easy to Repair"]
   },
   {
@@ -131,7 +131,7 @@ export const FENCING_TYPES_DATA: FencingTypeItem[] = [
     description: "High tensile double-strand wire with sharp 4-point barbs every 3 to 4 inches. Best budget-friendly perimeter solution.",
     lifespan: "12–18 Years",
     maintenance: "Minimal Maintenance",
-    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80",
+    image: "/images/fencing/2093d765-dd00-412e-bf1b-f7d31cedc2a4.jpg",
     highlights: ["High deterrent value", "Lowest cost per running foot", "3, 5, or 7 string layouts", "Fast deployment"]
   },
   {
@@ -141,7 +141,7 @@ export const FENCING_TYPES_DATA: FencingTypeItem[] = [
     description: "Rigid welded or woven galvanized wire offering firm stability and uniform spacing for animal containment.",
     lifespan: "15+ Years",
     maintenance: "Very Low",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+    image: "/images/fencing/863c164a-634e-49da-992e-c370b4b4f47c.jpg",
     highlights: ["Hot-dipped galvanizing", "Strong weld points", "Resistant to gnawing pests", "Aesthetic clean lines"]
   },
   {
@@ -151,7 +151,7 @@ export const FENCING_TYPES_DATA: FencingTypeItem[] = [
     description: "Concrete poles reinforced with high-grade steel rods. Acts as indestructible backbone for any wire type.",
     lifespan: "25+ Years",
     maintenance: "Zero Maintenance",
-    image: "https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=800&q=80",
+    image: "/images/fencing/2842b4ce-4379-4313-8723-8233fc5b5b97.jpg",
     highlights: ["6ft, 7ft & 8ft heights", "High concrete density", "Pre-molded wire holes", "Weather & fire immune"]
   },
   {
@@ -161,7 +161,7 @@ export const FENCING_TYPES_DATA: FencingTypeItem[] = [
     description: "Flexible high tensile hinge-joint fencing that flexes on impact and springs back without breaking.",
     lifespan: "20+ Years",
     maintenance: "Low Maintenance",
-    image: "https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=800&q=80",
+    image: "/images/fencing/7594a0cd-85e0-4b8f-9773-a919d912bd5d.jpg",
     highlights: ["Graduated ground-level protection", "Spring-action steel", "No stretching sag", "Wild hog deterring"]
   },
   {
@@ -171,7 +171,7 @@ export const FENCING_TYPES_DATA: FencingTypeItem[] = [
     description: "Multi-layered perimeter with bottom RCC foundation, heavy chain link, and top razor wire coils.",
     lifespan: "20+ Years",
     maintenance: "Periodic Inspection",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+    image: "/images/fencing/8e87a9a9-26a5-4b18-958a-5d9f55ee45ca.jpg",
     highlights: ["Concertina razor coil tops", "Anti-dig ground beam", "Custom entrance gates", "Maximum security rating"]
   }
 ];

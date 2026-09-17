@@ -17,7 +17,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     location: "Pollachi, Coimbatore",
     propertyType: "10-Acre Agricultural Land",
     rating: 5,
-    content: "Good quality fencing work and professional installation. The team completed our farm boundary work neatly within 4 days. Strong RCC posts and tightly stretched GI wire. Highly recommend Sri Fence Solutions!",
+    content: "Good quality fencing work and professional installation. The team completed our farm boundary work neatly within 4 days. Strong RCC posts and tightly stretched GI wire. Highly recommend SRI SAI WIRE NETTING!",
     date: "February 2026"
   },
   {
@@ -47,7 +47,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     location: "Tiruppur SIDCO",
     propertyType: "Commercial Factory Perimeter",
     rating: 5,
-    content: "We needed urgent high-security fencing with concertina razor wires for our textile warehouse. Sri Fence completed 1,400 feet with impeccable quality. True professionals in Tamil Nadu.",
+    content: "We needed urgent high-security fencing with concertina razor wires for our textile warehouse. SRI SAI WIRE NETTING completed 1,400 feet with impeccable quality. True professionals in Tamil Nadu.",
     date: "March 2026"
   }
 ];

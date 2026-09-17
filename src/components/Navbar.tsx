@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { COMPANY_DATA } from "../data/company";
-import { MessageCircle, Menu, X, Shield, ArrowRight, Home, Info, Wrench, Image, Eye, Award, PhoneCall } from "lucide-react";
+import { MessageCircle, Menu, X, ArrowRight, Home, Info, Wrench, Eye, Video, PhoneCall } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,9 +44,8 @@ export const Navbar: React.FC = () => {
     { href: "#home", label: "Home", icon: Home },
     { href: "#about", label: "About Us", icon: Info },
     { href: "#services", label: "Services", icon: Wrench },
-    { href: "#works", label: "Our Works", icon: Image },
     { href: "#projects", label: "Showcase", icon: Eye },
-    { href: "#why-us", label: "Why Choose Us", icon: Award },
+    { href: "#videos", label: "Videos", icon: Video },
     { href: "#contact", label: "Contact Us", icon: PhoneCall },
   ];
 
@@ -57,7 +56,7 @@ export const Navbar: React.FC = () => {
           {/* Brand Logo */}
           <a href="#home" className="nav-brand" onClick={closeMobileMenu}>
             <div className="brand-icon-box">
-              <Shield className="brand-shield" size={22} />
+              <img src="/images/logo.png" alt={COMPANY_DATA.name} className="brand-logo-img" />
             </div>
             <div className="brand-text-block">
               <span className="brand-title">{COMPANY_DATA.name}</span>
@@ -70,9 +69,8 @@ export const Navbar: React.FC = () => {
             <a href="#home" className="nav-link">Home</a>
             <a href="#about" className="nav-link">About Us</a>
             <a href="#services" className="nav-link">Services</a>
-            <a href="#works" className="nav-link">Our Works</a>
             <a href="#projects" className="nav-link">Showcase</a>
-            <a href="#why-us" className="nav-link">Why Choose Us</a>
+            <a href="#videos" className="nav-link">Videos</a>
             <a href="#contact" className="nav-link">Contact Us</a>
           </nav>
 
@@ -121,9 +119,14 @@ export const Navbar: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="mobile-drawer-header">
-                <div className="brand-text-block">
-                  <span className="brand-title">{COMPANY_DATA.name}</span>
-                  <span className="brand-subtitle">{COMPANY_DATA.badge}</span>
+                <div className="nav-brand">
+                  <div className="brand-icon-box">
+                    <img src="/images/logo.png" alt={COMPANY_DATA.name} className="brand-logo-img" />
+                  </div>
+                  <div className="brand-text-block">
+                    <span className="brand-title">{COMPANY_DATA.name}</span>
+                    <span className="brand-subtitle">{COMPANY_DATA.badge}</span>
+                  </div>
                 </div>
                 <button
                   type="button"

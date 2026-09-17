@@ -21,7 +21,7 @@ export const LargeImageCTA: React.FC = () => {
           <div className="cta-shield-icon">
             <Shield size={28} />
           </div>
-          <span className="cta-badge-label">SAI WIRES AND FENCE</span>
+          <span className="cta-badge-label">SRI SAI WIRE NETTING</span>
           <h2 className="cta-main-heading">READY TO SECURE YOUR LAND?</h2>
           <p className="cta-sub-text">
             Get in touch for your fencing requirement.
